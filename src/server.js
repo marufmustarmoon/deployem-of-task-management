@@ -38,11 +38,11 @@ app.get('/', (req, res) => {
 
 
 
-// // Sync models with database
-// db.sync({ force: false })  // Use {force: true} for dev (drops tables), false for prod
-//   .then(() => {
-//     console.log('Database & tables created!');
-//   });
+// Sync models with database
+db.sync({ force: false })  // Use {force: true} for dev (drops tables), false for prod
+  .then(() => {
+    console.log('Database & tables created!');
+  });
 
 
 // Start the server

@@ -17,14 +17,14 @@ const router = express.Router();
  *           schema:
  *             type: object
  *             properties:
- *               name:
+ *               username:
  *                 type: string
  *               email:
  *                 type: string
  *               password:
  *                 type: string
  *             example:
- *               name: John Doe
+ *               username: John Doe
  *               email: john.doe@example.com
  *               password: mysecretpassword
  *     responses:

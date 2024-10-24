@@ -5,6 +5,7 @@ const User = require('../models/User');
 
 // User registration
 exports.register = async (req, res) => {
+  console.log(req.body);
   const { username, email, password } = req.body;
 
   // Validate input
@@ -31,6 +32,7 @@ exports.register = async (req, res) => {
 
     res.status(201).json({ token });
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: 'Server error' });
   }
 };

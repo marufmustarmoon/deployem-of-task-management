@@ -8,8 +8,8 @@ exports.createTask = async (req, res) => {
     const task = await Task.create({
       title,
       description,
-      userId: req.user.userId,  // req.user is set by the JWT middleware
-      status: 'Open',  // Default status when a task is created
+      userId: req.user.userId,  
+      status: 'Open',  
     });
 
     res.status(201).json(task);
