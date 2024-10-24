@@ -16,13 +16,13 @@ const cors = require('cors');
 const app = express();
 
 const corsOptions = {
-  origin: ['https://deploy-task-frontend.onrender.com', 'http://localhost:5173'],
-  credentials: true,
+  origin: '*'
+  
 };
 
 app.use(cors(corsOptions));
 
-app.use(cors(corsOptions));
+
 
 // Middleware to parse JSON
 app.use(express.json());
