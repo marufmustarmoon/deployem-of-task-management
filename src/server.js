@@ -7,14 +7,14 @@ const Task = require('./models/Task');
 const authRoutes = require('./routes/auth');
 const taskRoutes = require('./routes/task');
 const swaggerDocs = require('./config/swagger');
-const corsOptions = require('./config/cors');
+
 
 
 // Initialize express
 const app = express();
 
 //use for cors
-app.use(cors(corsOptions));
+app.use(cors());
 
 // Middleware to parse JSON
 app.use(express.json());
