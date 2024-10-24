@@ -7,6 +7,7 @@ const Task = require('./models/Task');
 const authRoutes = require('./routes/auth');
 const taskRoutes = require('./routes/task');
 const swaggerDocs = require('./config/swagger');
+const corsOptions = require('./config/cors');
 
 
 // Initialize express
