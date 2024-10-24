@@ -1,12 +1,15 @@
 require('dotenv').config();
 const express = require('express');
 const db = require('./config/database');
-const cors = require('./config/cors');
+// const cors = require('./config/cors');
 const User = require('./models/User');
 const Task = require('./models/Task');
 const authRoutes = require('./routes/auth');
 const taskRoutes = require('./routes/task');
 const swaggerDocs = require('./config/swagger');
+
+
+const cors = require('cors');
 
 
 // Initialize express
