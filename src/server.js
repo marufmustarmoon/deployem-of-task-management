@@ -12,8 +12,14 @@ const swaggerDocs = require('./config/swagger');
 // Initialize express
 const app = express();
 
-//use for cors
-app.use(cors);
+const corsOptions = {
+  origin: ['https://deploy-task-frontend.onrender.com', 'http://localhost:5173'],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
+app.use(cors(corsOptions));
 
 // Middleware to parse JSON
 app.use(express.json());
