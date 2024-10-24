@@ -9,12 +9,11 @@ const taskRoutes = require('./routes/task');
 const swaggerDocs = require('./config/swagger');
 
 
-
 // Initialize express
 const app = express();
 
 //use for cors
-app.use(cors());
+app.use(cors);
 
 // Middleware to parse JSON
 app.use(express.json());
