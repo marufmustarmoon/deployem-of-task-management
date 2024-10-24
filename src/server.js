@@ -13,7 +13,7 @@ const swaggerDocs = require('./config/swagger');
 const app = express();
 
 //use for cors
-app.use(cors);
+app.use(cors(corsOptions));
 
 // Middleware to parse JSON
 app.use(express.json());
