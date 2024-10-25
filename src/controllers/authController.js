@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const { body, validationResult } = require('express-validator');
 const User = require('../models/User');
 
-const JWT_SECRET = 'your_direct_secret_key';
+const JWT_SECRET = 'my_direct_secret_key';
 
 
 exports.register = async (req, res) => {
@@ -30,7 +30,7 @@ exports.register = async (req, res) => {
     user = await User.create({ username, email, password: hashedPassword });
 
     // Generate JWT token
-    const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    const token = jwt.sign({ userId: user.id }, JWT_SECRET, { expiresIn: '1h' });
 
     res.status(201).json({ token });
   } catch (error) {
